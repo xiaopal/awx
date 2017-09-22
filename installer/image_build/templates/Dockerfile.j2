@@ -9,8 +9,10 @@ FROM centos:7
 USER root
 
 # Init System
-ADD https://github.com/krallin/tini/releases/download/v0.14.0/tini /tini
-RUN chmod +x /tini
+
+# ADD https://github.com/krallin/tini/releases/download/v0.14.0/tini /tini
+# RUN chmod +x /tini
+ADD https://npc.nos-eastchina1.126.net/tini_v0.14.0.tar.gz /
 
 ADD Makefile /tmp/Makefile
 RUN mkdir /tmp/requirements
