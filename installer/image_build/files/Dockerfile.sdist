@@ -1,6 +1,9 @@
 FROM centos:7
 
-RUN yum install -y epel-release
+ADD http://mirrors.163.com/.help/CentOS7-Base-163.repo /etc/yum.repos.d/CentOS-Base.repo
+ADD http://mirrors.aliyun.com/repo/epel-7.repo /etc/yum.repos.d/epel.repo
+
+# RUN yum install -y epel-release
 
 RUN yum install -y bzip2 \
     gcc-c++ \
